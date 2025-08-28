@@ -94,13 +94,13 @@
     </style>
   </head>
   <body>
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
     <header><h1>Interest Calculator</h1></header>
     <hr />
     <main>
       <fieldset>
-        <legend>Calculate Interest:</legend>
-        <form onsubmit="calculateInterest(event)">
+        <legend>Calculate Simple Interest:</legend>
+        <form id="simpleInterestForm">
           Principal Amount:
           <input
             type="number"
@@ -134,10 +134,19 @@
             style="margin-bottom: 5px"
           />
         </form>
+        <p class="result" id="interestPara1">
+          <b>Interest:</b>
+          <span id="interestSpan1"></span>
+        </p>
         <p class="result" id="amountPara1">
-          <b>Amount:</b>
+          <b>Total Amount:</b>
           <span id="amountSpan1"></span>
         </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Calculate Compound Interest:</legend>
+        <form id="compoundInterestForm"></form>
       </fieldset>
     </main>
     <hr id="footerHr" />
@@ -169,7 +178,7 @@
         </a>
         <br />
         &copy; Copyright, Sai Sriyan Nakka 2025, All Rights Reserved.
-        <b> <br />Version 0.2 <br /> </b>
+        <b> <br />Version 0.5 <br /> </b>
       </center>
     </footer>
   </body>
