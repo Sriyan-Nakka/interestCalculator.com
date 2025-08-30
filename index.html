@@ -71,8 +71,11 @@
       }
       fieldset {
         border-radius: 10px;
+        border: 3px solid white;
         display: inline-block;
         padding-bottom: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
       }
       .input {
         width: 100px;
@@ -87,8 +90,6 @@
       }
       .result {
         color: var(--result-color);
-      }
-      #amountPara1 {
         display: none;
       }
     </style>
@@ -104,7 +105,7 @@
           Principal Amount:
           <input
             type="number"
-            id="principalAmount"
+            id="SIprincipalAmount"
             min="0"
             class="input"
             required
@@ -114,7 +115,7 @@
           <input
             type="number"
             min="0"
-            id="interestRate"
+            id="SIinterestRate"
             class="input"
             required
           />
@@ -125,7 +126,7 @@
             type="number"
             class="input"
             min="1"
-            id="years"
+            id="SIyears"
             required
           /><br />
           <input
@@ -134,19 +135,55 @@
             style="margin-bottom: 5px"
           />
         </form>
-        <p class="result" id="interestPara1">
+        <p class="result" id="interestParaSI">
           <b>Interest:</b>
-          <span id="interestSpan1"></span>
+          <span id="interestSpanSI"></span>
         </p>
-        <p class="result" id="amountPara1">
+        <p class="result" id="amountParaSI">
           <b>Total Amount:</b>
-          <span id="amountSpan1"></span>
+          <span id="amountSpanSI"></span>
         </p>
       </fieldset>
 
       <fieldset>
         <legend>Calculate Compound Interest:</legend>
-        <form id="compoundInterestForm"></form>
+        <form id="compoundInterestForm">
+          Principal Amount:
+          <input
+            type="number"
+            min="0"
+            class="input"
+            id="CIprincipalAmount"
+            required
+          />
+          <br />
+          Interest Rate per year:
+          <input
+            type="number"
+            min="0"
+            class="input"
+            id="CIinterestRate"
+            required
+          />
+          %
+          <br />
+          No. of years:
+          <input type="number" min="1" class="input" id="CIyears" required />
+          <br />
+          <input
+            type="submit"
+            style="margin-bottom: 5px"
+            value="Calculate Interest"
+          />
+        </form>
+        <p class="result" id="interestParaCI">
+          <b>Interest:</b>
+          <span id="interestSpanCI"></span>
+        </p>
+        <p class="result" id="amountParaCI">
+          <b>Total Amount:</b>
+          <span id="amountSpanCI"></span>
+        </p>
       </fieldset>
     </main>
     <hr id="footerHr" />
@@ -178,7 +215,7 @@
         </a>
         <br />
         &copy; Copyright, Sai Sriyan Nakka 2025, All Rights Reserved.
-        <b> <br />Version 0.5 <br /> </b>
+        <b> <br />Version 0.9 <br /> </b>
       </center>
     </footer>
   </body>
