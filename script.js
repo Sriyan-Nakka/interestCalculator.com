@@ -2,7 +2,7 @@ import {
   calcSimpleInterest,
   calcCompoundInterest,
   interestAmt,
-} from "../calc.js";
+} from "./calc.js";
 
 const SIform = document.querySelector("#simpleInterestForm");
 const CIform = document.querySelector("#compoundInterestForm");
